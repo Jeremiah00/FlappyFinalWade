@@ -28,15 +28,13 @@ public class PlayerScript : MonoBehaviour
             }
         }
         
-        
-
 
     }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         rigidbody2d.velocity = Vector2.zero;
-
         stillAlive = false;
         Destroy(gameObject);
         GameController.instance.BirdDied();
